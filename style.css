@@ -2156,7 +2156,8 @@ img { max-width: 100%; }
 
 /* ---- Benchmark bar shimmer ---- */
 .bench-after {
-  position: relative;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
 }
 .bench-after::after {
