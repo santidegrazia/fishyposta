@@ -1,0 +1,12 @@
+{
+    // Fishy CS2 — Abrir index.html en Chrome
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir Fishy CS2",
+            "file": "${workspaceFolder}/index.html"
+        }
+    ]
+}
