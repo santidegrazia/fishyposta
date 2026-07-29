@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Fishy — Cheat Privado para CS2 | Aimbot & Wallhack Indetectable</title>
   <meta name="description" content="Fishy: el cheat privado e indetectable para CS2. Wallhack, Aimbot, ESP, Radar Hack y más. Comprá por Discord — soporte 24/7.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -34,17 +34,23 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#planes">Planes</a>
-        <a href="#como-funciona">Funciones</a>
-        <a href="#resultados">Stats</a>
-        <a href="#preguntas">FAQ</a>
+        <a href="#planes" data-i18n="nav_planes">Planes</a>
+        <a href="#como-funciona" data-i18n="nav_funciones">Funciones</a>
+        <a href="#resultados" data-i18n="nav_stats">Stats</a>
+        <a href="#preguntas" data-i18n="nav_faq">FAQ</a>
       </nav>
 
-      <div class="nav-live-badge">Undetected</div>
+      <div class="nav-live-badge" data-i18n="nav_badge">Undetected</div>
+
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma / Switch language">
+        <span class="lang-opt lang-es active">ES</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-opt lang-en">EN</span>
+      </button>
 
       <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="btn btn-discord btn-small" style="width:auto;height:auto;padding:0.55rem 1.2rem;font-size:0.84rem;">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-        Unirse al Discord
+        <span data-i18n="nav_discord">Unirse al Discord</span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -72,32 +78,32 @@
             <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
               <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/>
             </svg>
-            Cheat Privado · CS2 2026
+            <span data-i18n="hero_eyebrow">Cheat Privado · CS2 2026</span>
           </div>
 
           <h1 class="product-title">
             Fishy
-            <span class="product-title-glow">CS2 Cheat.<span class="typing-cursor"></span></span>
+            <span class="product-title-glow"><span data-i18n="hero_glow">CS2 Cheat.</span><span class="typing-cursor"></span></span>
           </h1>
 
-          <p class="product-desc">Wallhack, Aimbot, ESP y Radar Hack para CS2. Mirá a través de las paredes, lockeá enemigos con precisión perfecta y dominá cada partida — todo sin riesgo de ban.</p>
+          <p class="product-desc" data-i18n="hero_desc">Wallhack, Aimbot, ESP y Radar Hack para CS2. Mirá a través de las paredes, lockeá enemigos con precisión perfecta y dominá cada partida — todo sin riesgo de ban.</p>
 
           <ul class="check-list">
             <li>
               <svg viewBox="0 0 24 24" class="icon-check"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
-              Indetectable por VAC &amp; Overwatch
+              <span data-i18n="check_1">Indetectable por VAC &amp; Overwatch</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" class="icon-check"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
-              Actualizaciones automáticas post-parche
+              <span data-i18n="check_2">Actualizaciones automáticas post-parche</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" class="icon-check"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
-              Soporte técnico 24/7 por Discord
+              <span data-i18n="check_3">Soporte técnico 24/7 por Discord</span>
             </li>
             <li>
               <svg viewBox="0 0 24 24" class="icon-check"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
-              Entrega inmediata al comprar
+              <span data-i18n="check_4">Entrega inmediata al comprar</span>
             </li>
           </ul>
 
@@ -107,11 +113,11 @@
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                   <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
                 </svg>
-                Comprar por Discord
+                <span data-i18n="btn_buy_discord">Comprar por Discord</span>
               </a>
             </div>
             <a href="#planes" class="btn-text">
-              Ver planes y precios
+              <span data-i18n="btn_see_plans">Ver planes y precios</span>
               <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
@@ -119,91 +125,91 @@
           <div class="trust-row">
             <span>
               <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"/><polyline points="9 12 11 14 15 10"/></svg>
-              0 bans en 2026
+              <span data-i18n="trust_1">0 bans en 2026</span>
             </span>
             <span>
               <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
-              Soporte 24/7
+              <span data-i18n="trust_2">Soporte 24/7</span>
             </span>
             <span>
               <svg viewBox="0 0 24 24" class="icon-sm"><path d="M13 2 5 14h6l-1 8 9-12h-6z"/></svg>
-              Entrega inmediata
+              <span data-i18n="trust_3">Entrega inmediata</span>
             </span>
           </div>
         </div>
       </div>
 
-      <p class="product-more">// Más productos en desarrollo — estate atento.</p>
+      <p class="product-more" data-i18n="product_more">// Más productos en desarrollo — estate atento.</p>
     </section>
 
     <!-- ============ PRICING PLANS ============ -->
     <section class="pricing" id="planes">
       <div class="section-head">
-        <span class="eyebrow">Planes</span>
-        <h2>Elegí tu plan.<br>Empezá a dominar.</h2>
-        <p class="section-sub">Todos los planes incluyen acceso completo a todos los módulos, actualizaciones automáticas y soporte 24/7 por Discord.</p>
+        <span class="eyebrow" data-i18n="pricing_eyebrow">Planes</span>
+        <h2 data-i18n="pricing_title">Elegí tu plan.<br>Empezá a dominar.</h2>
+        <p class="section-sub" data-i18n="pricing_sub">Todos los planes incluyen acceso completo a todos los módulos, actualizaciones automáticas y soporte 24/7 por Discord.</p>
       </div>
 
       <div class="pricing-grid">
         <!-- Plan Semanal -->
         <div class="pricing-card reveal">
-          <span class="pricing-label">Semanal</span>
+          <span class="pricing-label" data-i18n="plan_weekly_title">Semanal</span>
           <div class="pricing-price">$5.000<span class="pricing-currency">ARS</span></div>
-          <span class="pricing-period">7 días de acceso</span>
+          <span class="pricing-period" data-i18n="plan_weekly_period">7 días de acceso</span>
           <ul class="pricing-features">
-            <li>Todos los módulos</li>
-            <li>Wallhack + ESP</li>
-            <li>Aimbot + Triggerbot</li>
-            <li>Actualizaciones incluidas</li>
-            <li>Soporte por Discord</li>
+            <li data-i18n="feature_all_modules">Todos los módulos</li>
+            <li data-i18n="feature_wall_esp">Wallhack + ESP</li>
+            <li data-i18n="feature_aim_trigger">Aimbot + Triggerbot</li>
+            <li data-i18n="feature_updates">Actualizaciones incluidas</li>
+            <li data-i18n="feature_discord_sup">Soporte por Discord</li>
           </ul>
           <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="btn btn-pricing">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
-            Comprar por Discord
+            <span data-i18n="btn_buy_discord">Comprar por Discord</span>
           </a>
         </div>
 
         <!-- Plan Mensual (Destacado) -->
         <div class="pricing-card pricing-card--featured reveal">
-          <span class="pricing-badge-popular">✨ Más Popular</span>
-          <span class="pricing-label">Mensual</span>
+          <span class="pricing-badge-popular" data-i18n="plan_monthly_popular">✨ Más Popular</span>
+          <span class="pricing-label" data-i18n="plan_monthly_title">Mensual</span>
           <div class="pricing-price">$10.000<span class="pricing-currency">ARS</span></div>
-          <span class="pricing-period">30 días de acceso</span>
+          <span class="pricing-period" data-i18n="plan_monthly_period">30 días de acceso</span>
           <ul class="pricing-features">
-            <li>Todos los módulos</li>
-            <li>Wallhack + ESP</li>
-            <li>Aimbot + Triggerbot</li>
-            <li>Radar Hack + Bhop</li>
-            <li>Actualizaciones incluidas</li>
-            <li>Soporte prioritario</li>
+            <li data-i18n="feature_all_modules">Todos los módulos</li>
+            <li data-i18n="feature_wall_esp">Wallhack + ESP</li>
+            <li data-i18n="feature_aim_trigger">Aimbot + Triggerbot</li>
+            <li data-i18n="feature_radar_bhop">Radar Hack + Bhop</li>
+            <li data-i18n="feature_updates">Actualizaciones incluidas</li>
+            <li data-i18n="feature_priority_sup">Soporte prioritario</li>
           </ul>
           <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="btn btn-pricing btn-pricing--featured">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
-            Comprar por Discord
+            <span data-i18n="btn_buy_discord">Comprar por Discord</span>
           </a>
         </div>
 
         <!-- Plan Lifetime -->
         <div class="pricing-card reveal">
-          <span class="pricing-label">Lifetime</span>
+          <span class="pricing-label" data-i18n="plan_lifetime_title">Lifetime</span>
           <div class="pricing-price">$25.000<span class="pricing-currency">ARS</span></div>
-          <span class="pricing-period">Acceso de por vida</span>
+          <span class="pricing-period" data-i18n="plan_lifetime_period">Acceso de por vida</span>
           <ul class="pricing-features">
-            <li>Todos los módulos</li>
-            <li>Acceso ilimitado</li>
-            <li>Todas las actualizaciones</li>
-            <li>Soporte VIP prioritario</li>
-            <li>Acceso a betas</li>
-            <li>Rol exclusivo en Discord</li>
+            <li data-i18n="feature_all_modules">Todos los módulos</li>
+            <li data-i18n="feature_unlimited">Acceso ilimitado</li>
+            <li data-i18n="feature_all_updates">Todas las actualizaciones</li>
+            <li data-i18n="feature_vip_sup">Soporte VIP prioritario</li>
+            <li data-i18n="feature_betas">Acceso a betas</li>
+            <li data-i18n="feature_role">Rol exclusivo en Discord</li>
           </ul>
           <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="btn btn-pricing">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
-            Comprar por Discord
+            <span data-i18n="btn_buy_discord">Comprar por Discord</span>
           </a>
         </div>
       </div>
 
-      <p class="pricing-note">// Todas las compras se realizan a través de nuestro Discord — hablás con un vendedor y te entregamos al instante.</p>
+      <p class="pricing-note" data-i18n="pricing_note">// Todas las compras se realizan a través de nuestro Discord — hablás con un vendedor y te entregamos al instante.</p>
     </section>
 
     <!-- ============ STATS BIG COUNTERS ============ -->
@@ -211,19 +217,19 @@
       <div class="stats-big-grid">
         <div class="stats-big-item reveal">
           <div class="counter-value" data-target="50" data-prefix="+" data-suffix="">0</div>
-          <div class="counter-label">Usuarios activos</div>
+          <div class="counter-label" data-i18n="stat_users">Usuarios activos</div>
         </div>
         <div class="stats-big-item reveal">
           <div class="counter-value" data-target="0">0</div>
-          <div class="counter-label">Bans en 2026</div>
+          <div class="counter-label" data-i18n="stat_bans">Bans en 2026</div>
         </div>
         <div class="stats-big-item reveal">
           <div class="counter-value" data-target="24" data-prefix="<" data-suffix="h">0</div>
-          <div class="counter-label">Update post-parche</div>
+          <div class="counter-label" data-i18n="stat_update">Update post-parche</div>
         </div>
         <div class="stats-big-item reveal">
           <div class="counter-value" data-target="5" data-suffix="★">0</div>
-          <div class="counter-label">Satisfacción</div>
+          <div class="counter-label" data-i18n="stat_satisfaction">Satisfacción</div>
         </div>
       </div>
     </section>
@@ -234,32 +240,32 @@
     <div class="stats-strip">
       <div class="stats-strip-inner">
         <!-- First set -->
-        <div class="stat-item"><strong>+50</strong> usuarios activos</div>
-        <div class="stat-item"><strong>0</strong> bans reportados en 2026</div>
-        <div class="stat-item"><strong>87%</strong> headshot promedio</div>
-        <div class="stat-item"><strong>4.2</strong> K/D promedio</div>
-        <div class="stat-item"><strong>94%</strong> win rate</div>
-        <div class="stat-item"><strong>&lt;24h</strong> tiempo de actualización post-parche</div>
-        <div class="stat-item"><strong>5 ★</strong> satisfacción de usuarios</div>
-        <div class="stat-item"><strong>⚡</strong> Descarga inmediata tras el pago</div>
+        <div class="stat-item"><strong>+50</strong> <span data-i18n="strip_users">usuarios activos</span></div>
+        <div class="stat-item"><strong>0</strong> <span data-i18n="strip_bans">bans reportados en 2026</span></div>
+        <div class="stat-item"><strong>87%</strong> <span data-i18n="strip_headshot">headshot promedio</span></div>
+        <div class="stat-item"><strong>4.2</strong> <span data-i18n="strip_kd">K/D promedio</span></div>
+        <div class="stat-item"><strong>94%</strong> <span data-i18n="strip_winrate">win rate</span></div>
+        <div class="stat-item"><strong>&lt;24h</strong> <span data-i18n="strip_updatetime">tiempo de actualización post-parche</span></div>
+        <div class="stat-item"><strong>5 ★</strong> <span data-i18n="strip_satisfaction">satisfacción de usuarios</span></div>
+        <div class="stat-item"><strong>⚡</strong> <span data-i18n="strip_instant">Descarga inmediata tras el pago</span></div>
         <!-- Repeat for seamless loop -->
-        <div class="stat-item"><strong>+50</strong> usuarios activos</div>
-        <div class="stat-item"><strong>0</strong> bans reportados en 2026</div>
-        <div class="stat-item"><strong>87%</strong> headshot promedio</div>
-        <div class="stat-item"><strong>4.2</strong> K/D promedio</div>
-        <div class="stat-item"><strong>94%</strong> win rate</div>
-        <div class="stat-item"><strong>&lt;24h</strong> tiempo de actualización post-parche</div>
-        <div class="stat-item"><strong>5 ★</strong> satisfacción de usuarios</div>
-        <div class="stat-item"><strong>⚡</strong> Descarga inmediata tras el pago</div>
+        <div class="stat-item"><strong>+50</strong> <span data-i18n="strip_users">usuarios activos</span></div>
+        <div class="stat-item"><strong>0</strong> <span data-i18n="strip_bans">bans reportados en 2026</span></div>
+        <div class="stat-item"><strong>87%</strong> <span data-i18n="strip_headshot">headshot promedio</span></div>
+        <div class="stat-item"><strong>4.2</strong> <span data-i18n="strip_kd">K/D promedio</span></div>
+        <div class="stat-item"><strong>94%</strong> <span data-i18n="strip_winrate">win rate</span></div>
+        <div class="stat-item"><strong>&lt;24h</strong> <span data-i18n="strip_updatetime">tiempo de actualización post-parche</span></div>
+        <div class="stat-item"><strong>5 ★</strong> <span data-i18n="strip_satisfaction">satisfacción de usuarios</span></div>
+        <div class="stat-item"><strong>⚡</strong> <span data-i18n="strip_instant">Descarga inmediata tras el pago</span></div>
       </div>
     </div>
 
     <!-- ============ FEATURES ============ -->
     <section class="features" id="como-funciona">
       <div class="section-head">
-        <span class="eyebrow">Funciones</span>
-        <h2>Seis módulos.<br>Ventaja total.</h2>
-        <p class="section-sub">Cada módulo se activa con una tecla desde el menú in-game. Sin salir de la partida, sin complicaciones.</p>
+        <span class="eyebrow" data-i18n="features_eyebrow">Funciones</span>
+        <h2 data-i18n="features_title">Seis módulos.<br>Ventaja total.</h2>
+        <p class="section-sub" data-i18n="features_sub">Cada módulo se activa con una tecla desde el menú in-game. Sin salir de la partida, sin complicaciones.</p>
       </div>
 
       <div class="feature-grid">
@@ -271,8 +277,8 @@
               <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
-          <h3>Wallhack / ESP</h3>
-          <p>Ves a todos los jugadores a través de paredes. Cajas ESP, esqueletos, líneas de visión, vida, nombre y arma — todo configurable en tiempo real.</p>
+          <h3 data-i18n="f1_title">Wallhack / ESP</h3>
+          <p data-i18n="f1_desc">Ves a todos los jugadores a través de paredes. Cajas ESP, esqueletos, líneas de visión, vida, nombre y arma — todo configurable en tiempo real.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -284,8 +290,8 @@
               <line x1="12" y1="12" x2="16" y2="16"/>
             </svg>
           </div>
-          <h3>Aimbot</h3>
-          <p>Lockeo automático al enemigo más cercano a tu crosshair. FOV, smoothing y hueso-target ajustables para que parezca completamente humano.</p>
+          <h3 data-i18n="f2_title">Aimbot</h3>
+          <p data-i18n="f2_desc">Lockeo automático al enemigo más cercano a tu crosshair. FOV, smoothing y hueso-target ajustables para que parezca completamente humano.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -295,8 +301,8 @@
               <path d="M13 2 5 14h6l-1 8 9-12h-6z"/>
             </svg>
           </div>
-          <h3>Triggerbot</h3>
-          <p>Dispara automáticamente cuando tu mira pasa sobre un enemigo. Delay configurable para simular reacción humana perfecta.</p>
+          <h3 data-i18n="f3_title">Triggerbot</h3>
+          <p data-i18n="f3_desc">Dispara automáticamente cuando tu mira pasa sobre un enemigo. Delay configurable para simular reacción humana perfecta.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -308,8 +314,8 @@
               <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/>
             </svg>
           </div>
-          <h3>Radar Hack</h3>
-          <p>Muestra la posición de todos los enemigos en el minimap en tiempo real, incluso si no hacen ruido ni están visibles.</p>
+          <h3 data-i18n="f4_title">Radar Hack</h3>
+          <p data-i18n="f4_desc">Muestra la posición de todos los enemigos en el minimap en tiempo real, incluso si no hacen ruido ni están visibles.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -321,8 +327,8 @@
               <circle cx="12" cy="18" r="1" fill="currentColor" stroke="none"/>
             </svg>
           </div>
-          <h3>Bhop &amp; Auto-Strafe</h3>
-          <p>Bunny hop perfecto con strafe automático. Moverse por el mapa a máxima velocidad sin perder precisión de disparo.</p>
+          <h3 data-i18n="f5_title">Bhop &amp; Auto-Strafe</h3>
+          <p data-i18n="f5_desc">Bunny hop perfecto con strafe automático. Moverse por el mapa a máxima velocidad sin perder precisión de disparo.</p>
         </article>
 
         <article class="feature-card reveal">
@@ -333,8 +339,8 @@
               <polyline points="9 12 11 14 15 10"/>
             </svg>
           </div>
-          <h3>Anti-Detección</h3>
-          <p>Bypass de VAC y Overwatch integrado. Se actualiza automáticamente después de cada parche de CS2 en menos de 24 horas.</p>
+          <h3 data-i18n="f6_title">Anti-Detección</h3>
+          <p data-i18n="f6_desc">Bypass de VAC y Overwatch integrado. Se actualiza automáticamente después de cada parche de CS2 en menos de 24 horas.</p>
         </article>
       </div>
     </section>
@@ -342,17 +348,17 @@
     <!-- ============ RESULTADOS ============ -->
     <section class="benchmarks" id="resultados">
       <div class="section-head">
-        <span class="eyebrow">Estadísticas</span>
-        <h2>Números, no promesas.</h2>
-        <p class="section-sub">Promedio real de nuestros usuarios activos en las últimas 48 horas de juego con Fishy activado.</p>
+        <span class="eyebrow" data-i18n="stats_eyebrow">Estadísticas</span>
+        <h2 data-i18n="stats_title">Números, no promesas.</h2>
+        <p class="section-sub" data-i18n="stats_sub">Promedio real de nuestros usuarios activos en las últimas 48 horas de juego con Fishy activado.</p>
       </div>
 
       <div class="bench-grid">
         <div class="bench-card reveal">
           <span class="bench-label">Headshot %</span>
           <div class="bench-legend">
-            <span><span class="bench-legend-dot before"></span>Sin Fishy</span>
-            <span><span class="bench-legend-dot after"></span>Con Fishy</span>
+            <span><span class="bench-legend-dot before"></span><span data-i18n="bench_without">Sin Fishy</span></span>
+            <span><span class="bench-legend-dot after"></span><span data-i18n="bench_with">Con Fishy</span></span>
           </div>
           <div class="bench-bars">
             <div class="bench-bar">
@@ -369,8 +375,8 @@
         <div class="bench-card reveal">
           <span class="bench-label">K/D Ratio</span>
           <div class="bench-legend">
-            <span><span class="bench-legend-dot before"></span>Sin Fishy</span>
-            <span><span class="bench-legend-dot after"></span>Con Fishy</span>
+            <span><span class="bench-legend-dot before"></span><span data-i18n="bench_without">Sin Fishy</span></span>
+            <span><span class="bench-legend-dot after"></span><span data-i18n="bench_with">Con Fishy</span></span>
           </div>
           <div class="bench-bars">
             <div class="bench-bar">
@@ -387,8 +393,8 @@
         <div class="bench-card reveal">
           <span class="bench-label">Win Rate</span>
           <div class="bench-legend">
-            <span><span class="bench-legend-dot before"></span>Sin Fishy</span>
-            <span><span class="bench-legend-dot after"></span>Con Fishy</span>
+            <span><span class="bench-legend-dot before"></span><span data-i18n="bench_without">Sin Fishy</span></span>
+            <span><span class="bench-legend-dot after"></span><span data-i18n="bench_with">Con Fishy</span></span>
           </div>
           <div class="bench-bars">
             <div class="bench-bar">
@@ -402,7 +408,7 @@
           </div>
         </div>
       </div>
-      <p class="bench-disclaimer">Estadísticas promedio de usuarios activos con configuración predeterminada de Fishy. Los resultados pueden variar según el nivel de las partidas y la configuración elegida.</p>
+      <p class="bench-disclaimer" data-i18n="bench_disclaimer">Estadísticas promedio de usuarios activos con configuración predeterminada de Fishy. Los resultados pueden variar según el nivel de las partidas y la configuración elegida.</p>
     </section>
 
     <div class="section-separator"></div>
@@ -410,8 +416,8 @@
     <!-- ============ TRUST / SECURITY ============ -->
     <section class="trust">
       <div class="section-head">
-        <span class="eyebrow">Seguridad</span>
-        <h2>Jugá tranquilo.<br>Nosotros te cubrimos.</h2>
+        <span class="eyebrow" data-i18n="trust_eyebrow">Seguridad</span>
+        <h2 data-i18n="trust_title">Jugá tranquilo.<br>Nosotros te cubrimos.</h2>
       </div>
 
       <div class="trust-grid">
@@ -422,8 +428,8 @@
               <polyline points="9 12 11 14 15 10"/>
             </svg>
           </div>
-          <h3>Bypass de VAC integrado</h3>
-          <p>Nuestro loader usa técnicas de ofuscación avanzadas para evitar la detección por Valve Anti-Cheat.<br><strong style="color:var(--teal); display: inline-block; margin-top: 0.4rem; white-space: nowrap;">0 bans reportados en 2026.</strong></p>
+          <h3 data-i18n="t1_title">Bypass de VAC integrado</h3>
+          <p data-i18n="t1_desc">Nuestro loader usa técnicas de ofuscación avanzadas para evitar la detección por Valve Anti-Cheat.<br><strong style="color:var(--teal); display: inline-block; margin-top: 0.4rem; white-space: nowrap;">0 bans reportados en 2026.</strong></p>
         </div>
 
         <div class="trust-item reveal">
@@ -432,8 +438,8 @@
               <path d="M13 2 5 14h6l-1 8 9-12h-6z"/>
             </svg>
           </div>
-          <h3>Actualizaciones en &lt;24h</h3>
-          <p>Cuando Valve lanza un parche, nuestro equipo actualiza Fishy en menos de 24 horas. Recibís la update automáticamente sin hacer nada.</p>
+          <h3 data-i18n="t2_title">Actualizaciones en &lt;24h</h3>
+          <p data-i18n="t2_desc">Cuando Valve lanza un parche, nuestro equipo actualiza Fishy en menos de 24 horas. Recibís la update automáticamente sin hacer nada.</p>
         </div>
 
         <div class="trust-item reveal">
@@ -443,8 +449,8 @@
               <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
-          <h3>Modo "Legit" incluido</h3>
-          <p>Configuraciones prediseñadas que hacen que el cheat se vea completamente natural en Overwatch. Smoothing humano, FOV bajo y delays realistas.</p>
+          <h3 data-i18n="t3_title">Modo "Legit" incluido</h3>
+          <p data-i18n="t3_desc">Configuraciones prediseñadas que hacen que el cheat se vea completamente natural en Overwatch. Smoothing humano, FOV bajo y delays realistas.</p>
         </div>
       </div>
     </section>
@@ -452,72 +458,72 @@
     <!-- ============ REQUISITOS / HOW IT WORKS ============ -->
     <section class="requirements">
       <div class="section-head">
-        <span class="eyebrow">Instalación</span>
-        <h2>Listo en menos<br>de dos minutos.</h2>
+        <span class="eyebrow" data-i18n="req_eyebrow">Instalación</span>
+        <h2 data-i18n="req_title">Listo en menos<br>de dos minutos.</h2>
       </div>
 
       <div class="req-grid">
         <div class="req-step reveal">
           <span class="req-num">1</span>
-          <h3>Contactanos en Discord</h3>
-          <p>Entrá a nuestro Discord, elegí tu plan, hablás con un vendedor y te entregamos el loader al instante.</p>
+          <h3 data-i18n="r1_title">Contactanos en Discord</h3>
+          <p data-i18n="r1_desc">Entrá a nuestro Discord, elegí tu plan, hablás con un vendedor y te entregamos el loader al instante.</p>
         </div>
         <div class="req-step reveal">
           <span class="req-num">2</span>
-          <h3>Abrí el loader</h3>
-          <p>Ejecutá Fishy <em>antes</em> de abrir CS2. El loader inyecta todo automáticamente — sin pasos extras.</p>
+          <h3 data-i18n="r2_title">Abrí el loader</h3>
+          <p data-i18n="r2_desc">Ejecutá Fishy <em>antes</em> de abrir CS2. El loader inyecta todo automáticamente — sin pasos extras.</p>
         </div>
         <div class="req-step reveal">
           <span class="req-num">3</span>
-          <h3>Activá en partida</h3>
-          <p>Entrá a una partida y presioná <strong style="color:var(--teal);font-family:var(--font-mono)">INSERT</strong> para abrir el menú. Activá los módulos que quieras.</p>
+          <h3 data-i18n="r3_title">Activá en partida</h3>
+          <p data-i18n="r3_desc">Entrá a una partida y presioná <strong style="color:var(--teal);font-family:var(--font-mono)">INSERT</strong> para abrir el menú. Activá los módulos que quieras.</p>
         </div>
       </div>
 
-      <p class="req-specs">// Requiere Windows 10 / 11 (64 bits) · CS2 instalado · Desactivar Windows Defender durante la inyección</p>
+      <p class="req-specs" data-i18n="req_specs">// Requiere Windows 10 / 11 (64 bits) · CS2 instalado · Desactivar Windows Defender durante la inyección</p>
     </section>
 
     <!-- ============ FAQ ============ -->
     <section class="faq" id="preguntas">
       <div class="section-head">
-        <span class="eyebrow">Preguntas frecuentes</span>
-        <h2>Todo lo que preguntás<br>antes de unirte.</h2>
+        <span class="eyebrow" data-i18n="faq_eyebrow">Preguntas frecuentes</span>
+        <h2 data-i18n="faq_title">Todo lo que preguntás<br>antes de unirte.</h2>
       </div>
 
       <div class="faq-list">
         <details class="faq-item">
-          <summary>¿Es realmente indetectable?</summary>
-          <p>Sí. Fishy usa un sistema de inyección que evita la detección por VAC y Overwatch. Desde su lanzamiento en 2026, <strong style="color:var(--teal)">no hubo un solo ban reportado</strong> entre nuestros usuarios con la configuración predeterminada.</p>
+          <summary data-i18n="q1_summary">¿Es realmente indetectable?</summary>
+          <p data-i18n="q1_desc">Sí. Fishy usa un sistema de inyección que evita la detección por VAC y Overwatch. Desde su lanzamiento en 2026, <strong style="color:var(--teal)">no hubo un solo ban reportado</strong> entre nuestros usuarios con la configuración predeterminada.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Puedo configurar el aimbot para que se vea legit?</summary>
-          <p>Sí. Podés ajustar el FOV (campo de visión del aimbot), el smoothing (suavidad del movimiento), el hueso objetivo y agregar un delay de reacción humano. Tenemos presets <em>"Legit"</em> y <em>"Rage"</em> listos para usar.</p>
+          <summary data-i18n="q2_summary">¿Puedo configurar el aimbot para que se vea legit?</summary>
+          <p data-i18n="q2_desc">Sí. Podés ajustar el FOV (campo de visión del aimbot), el smoothing (suavidad del movimiento), el hueso objetivo y agregar un delay de reacción humano. Tenemos presets <em>"Legit"</em> y <em>"Rage"</em> listos para usar.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Se actualiza después de cada parche de CS2?</summary>
-          <p>Sí. Nuestro equipo actualiza Fishy en menos de 24 horas después de cada update de CS2. La actualización se descarga automáticamente desde el loader — no tenés que hacer nada.</p>
+          <summary data-i18n="q3_summary">¿Se actualiza después de cada parche de CS2?</summary>
+          <p data-i18n="q3_desc">Sí. Nuestro equipo actualiza Fishy en menos de 24 horas después de cada update de CS2. La actualización se descarga automáticamente desde el loader — no tenés que hacer nada.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Tengo que desactivar el antivirus?</summary>
-          <p>Sí, Windows Defender y cualquier antivirus de terceros deben estar desactivados durante la inyección. Esto es normal — el loader necesita acceder a la memoria del juego para funcionar.</p>
+          <summary data-i18n="q4_summary">¿Tengo que desactivar el antivirus?</summary>
+          <p data-i18n="q4_desc">Sí, Windows Defender y cualquier antivirus de terceros deben estar desactivados durante la inyección. Esto es normal — el loader necesita acceder a la memoria del juego para funcionar.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Qué pasa si me banean?</summary>
-          <p>En el caso extremadamente improbable de un ban, contactanos por Discord con tu comprobante de pago y te damos acceso a una nueva key sin costo adicional. Tu inversión está protegida.</p>
+          <summary data-i18n="q5_summary">¿Qué pasa si me banean?</summary>
+          <p data-i18n="q5_desc">En el caso extremadamente improbable de un ban, contactanos por Discord con tu comprobante de pago y te damos acceso a una nueva key sin costo adicional. Tu inversión está protegida.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Funciona en todos los modos de CS2?</summary>
-          <p>Sí, Fishy funciona en Competitivo, Deathmatch, Premier y todos los demás modos. El Modo "Legit" está especialmente optimizado para partidas de Premier donde Overwatch es más activo.</p>
+          <summary data-i18n="q6_summary">¿Funciona en todos los modos de CS2?</summary>
+          <p data-i18n="q6_desc">Sí, Fishy funciona en Competitivo, Deathmatch, Premier y todos los demás modos. El Modo "Legit" está especialmente optimizado para partidas de Premier donde Overwatch es más activo.</p>
         </details>
 
         <details class="faq-item">
-          <summary>¿Cómo compro Fishy?</summary>
-          <p>Todas las compras se realizan a través de nuestro <strong style="color:var(--teal)">servidor de Discord</strong>. Entrás al servidor, elegís tu plan (Semanal, Mensual o Lifetime), hablás con un vendedor y te entregamos el loader al instante. Es rápido, seguro y con soporte directo.</p>
+          <summary data-i18n="q7_summary">¿Cómo compro Fishy?</summary>
+          <p data-i18n="q7_desc">Todas las compras se realizan a través de nuestro <strong style="color:var(--teal)">servidor de Discord</strong>. Entrás al servidor, elegís tu plan (Semanal, Mensual o Lifetime), hablás con un vendedor y te entregamos el loader al instante. Es rápido, seguro y con soporte directo.</p>
         </details>
       </div>
     </section>
@@ -527,13 +533,13 @@
     <!-- ============ DISCORD BANNER ============ -->
     <div class="discord-banner" id="soporte">
       <div class="discord-banner-inner">
-        <h3>¿Listo para dominar CS2?<br>Unite a la comunidad.</h3>
-        <p>+50 usuarios activos confían en Fishy. Comprá tu plan, recibí soporte 24/7 y empezá a ganar — todo desde nuestro Discord.</p>
+        <h3 data-i18n="banner_title">¿Listo para dominar CS2?<br>Unite a la comunidad.</h3>
+        <p data-i18n="banner_desc">+50 usuarios activos confían en Fishy. Comprá tu plan, recibí soporte 24/7 y empezá a ganar — todo desde nuestro Discord.</p>
         <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="btn-discord-lg">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
           </svg>
-          Unirse al Discord — discord.gg/fishycs
+          <span data-i18n="banner_btn">Unirse al Discord — discord.gg/fishycs</span>
         </a>
       </div>
     </div>
@@ -553,22 +559,22 @@
       </a>
 
       <div class="footer-links">
-        <a href="#planes">Planes</a>
-        <a href="#como-funciona">Funciones</a>
-        <a href="#resultados">Stats</a>
-        <a href="#preguntas">FAQ</a>
+        <a href="#planes" data-i18n="nav_planes">Planes</a>
+        <a href="#como-funciona" data-i18n="nav_funciones">Funciones</a>
+        <a href="#resultados" data-i18n="nav_stats">Stats</a>
+        <a href="#preguntas" data-i18n="nav_faq">FAQ</a>
         <a href="https://discord.gg/fishycs" target="_blank" rel="noopener">Discord</a>
       </div>
 
       <div class="footer-contact">
-        <a href="https://discord.gg/fishycs" target="_blank" rel="noopener">Discord Support</a>
+        <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" data-i18n="footer_support">Discord Support</a>
         <a href="mailto:contacto@fishy.gg">contacto@fishy.gg</a>
       </div>
     </div>
 
     <div class="footer-legal">
-      <p>Fishy es un producto único creado para la comunidad. No está afiliado a Valve Corporation ni a Counter-Strike 2.</p>
-      <p>© 2026 Fishy. Todos los derechos reservados.</p>
+      <p data-i18n="footer_legal_1">Fishy es un producto único creado para la comunidad. No está afiliado a Valve Corporation ni a Counter-Strike 2.</p>
+      <p data-i18n="footer_legal_2">© 2026 Fishy. Todos los derechos reservados.</p>
     </div>
   </footer>
 
