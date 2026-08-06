@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1a14"/>
+      <stop offset="60%" stop-color="#060b0e"/>
+      <stop offset="100%" stop-color="#020406"/>
+    </radialGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1"/>
+      <feGaussianBlur stdDeviation="20" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#00ff88" stroke-width="0.5" stroke-opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" fill="url(#bgGlow)" rx="100"/>
+  
+  <!-- Cyber Grid Overlay -->
+  <rect width="512" height="512" fill="url(#grid)" rx="100"/>
+
+  <!-- Outer Glow Circle Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#00ff88" stroke-width="2" stroke-opacity="0.15" stroke-dasharray="12 8"/>
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#00ff88" stroke-width="1.5" stroke-opacity="0.2"/>
+
+  <!-- MAIN FISHY LOGO MARK (Glowing Neon Green) -->
+  <g transform="translate(76, 126) scale(9)" filter="url(#neonGlow)">
+    <!-- Body -->
+    <path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" 
+          fill="#060F0B" fill-opacity="0.8"
+          stroke="#00FF88" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    
+    <!-- Tail -->
+    <path d="M26 5L36 2L32 12L36 22L26 19" 
+          fill="#060F0B" fill-opacity="0.8"
+          stroke="#00FF88" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    
+    <!-- Eye -->
+    <circle cx="9" cy="11" r="1.5" fill="#00FF88"/>
+    
+    <!-- Tech Accent Lines -->
+    <path d="M12 9L18 13" stroke="#00FF88" stroke-width="0.8" stroke-opacity="0.6" stroke-linecap="round"/>
+    <path d="M14 15L20 12" stroke="#00FF88" stroke-width="0.8" stroke-opacity="0.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography FISHY -->
+  <text x="256" y="440" 
+        text-anchor="middle" 
+        fill="#00FF88" 
+        font-family="system-ui, -apple-system, 'Space Grotesk', 'Inter', sans-serif" 
+        font-weight="900" 
+        font-size="38" 
+        letter-spacing="12" 
+        filter="url(#neonGlow)">FISHY</text>
+</svg>

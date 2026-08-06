@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descargar Logo de Fishy para Discord (PNG HD)</title>
+  <style>
+    body {
+      background: #060a0d;
+      color: #00ff88;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .logo-container {
+      width: 320px;
+      height: 320px;
+      box-shadow: 0 0 40px rgba(0,255,136,0.3);
+      border-radius: 60px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    button {
+      background: #00ff88;
+      color: #060a0d;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0,255,136,0.4);
+      transition: all 0.2s ease;
+    }
+    button:hover {
+      background: #33ffa6;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h2 style="letter-spacing: 2px;">LOGO OFICIAL DE FISHY PARA DISCORD</h2>
+  <div class="logo-container">
+    <img id="svgImg" src="fishy_logo_discord.svg" width="320" height="320" alt="Fishy Logo">
+  </div>
+  <button onclick="downloadPNG()">Descargar en formato PNG (512x512 HD)</button>
+  <canvas id="canvas" width="512" height="512" style="display:none;"></canvas>
+
+  <script>
+    function downloadPNG() {
+      const img = new Image();
+      img.onload = function() {
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, 512, 512);
+        const a = document.createElement('a');
+        a.download = 'fishy_logo_discord.png';
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+      };
+      img.src = 'fishy_logo_discord.svg';
+    }
+  </script>
+</body>
+</html>
