@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Fishy — Purchase Your License | Secure Checkout</title>
-  <meta name="description" content="Choose your Fishy license and pay securely. Instant delivery of CS2 digital products. All payment methods accepted.">
+  <title>Fishy — Comprar Licencia | Pago Seguro con Stripe</title>
+  <meta name="description" content="Elegí tu licencia Fishy y pagá de forma segura con Stripe. Entrega instantánea de productos digitales para CS2.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
   <header class="nav" id="nav">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="index.html" class="logo" aria-label="Fishy — home">
+        <a href="index.html" class="logo" aria-label="Fishy — inicio">
           <svg class="logo-mark" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             <path d="M26 5L36 2L32 12L36 22L26 19" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -33,12 +33,16 @@
       </div>
 
       <nav class="nav-links">
-        <a href="index.html">HOME</a>
-        <a href="index.html#features">FEATURES</a>
+        <a href="index.html">INICIO</a>
+        <a href="index.html#features">PRODUCTO</a>
         <a href="index.html#faq">FAQ</a>
+        <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="nav-discord">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.12-.094.246-.198.373-.292a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.094.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
+          Discord
+        </a>
       </nav>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -51,61 +55,67 @@
       <!-- Left: Visual -->
       <div class="purchase-visual reveal">
         <div class="purchase-visual-card">
-          <img src="hero_hud.png" alt="Fishy AI — Product Interface">
+          <img src="hero_hud.png" alt="Fishy AI — Interfaz del producto">
         </div>
       </div>
 
       <!-- Right: Panel -->
       <div class="purchase-panel reveal">
         <h2 class="product-name">Fishy <span class="accent">AI</span></h2>
-        <p class="product-sub">Choose your license to get started</p>
+        <p class="product-sub">Elegí tu licencia para comenzar</p>
 
         <div class="license-grid" id="licenseGrid">
-          <div class="license-opt" data-plan="weekly" data-price="5000" data-label="1 Week">
-            <div class="dur">1 week</div>
+          <div class="license-opt" data-plan="weekly" data-price="5000" data-label="1 Semana" data-stripe="https://buy.stripe.com/TU_LINK_SEMANAL">
+            <div class="dur">1 semana</div>
             <div class="cost">$5.000</div>
           </div>
-          <div class="license-opt selected" data-plan="monthly" data-price="10000" data-label="1 Month">
-            <div class="dur">1 month</div>
+          <div class="license-opt selected" data-plan="monthly" data-price="10000" data-label="1 Mes" data-stripe="https://buy.stripe.com/TU_LINK_MENSUAL">
+            <div class="dur">1 mes</div>
             <div class="cost">$10.000</div>
           </div>
-          <div class="license-opt" data-plan="quarterly" data-price="20000" data-label="3 Months">
-            <div class="dur">3 months</div>
+          <div class="license-opt" data-plan="quarterly" data-price="20000" data-label="3 Meses" data-stripe="https://buy.stripe.com/TU_LINK_TRIMESTRAL">
+            <div class="dur">3 meses</div>
             <div class="cost">$20.000</div>
           </div>
-          <div class="license-opt" data-plan="lifetime" data-price="25000" data-label="Lifetime">
+          <div class="license-opt" data-plan="lifetime" data-price="25000" data-label="Lifetime" data-stripe="https://buy.stripe.com/TU_LINK_LIFETIME">
             <div class="dur">Lifetime</div>
             <div class="cost">$25.000</div>
           </div>
         </div>
 
         <div class="price-row">
-          <span class="label">Price</span>
+          <span class="label">Precio</span>
           <span class="total" id="totalPrice">$10.000</span>
         </div>
 
-        <button class="btn-buy" id="buyBtn" type="button">
-          Purchase now
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
+        <a href="https://buy.stripe.com/TU_LINK_MENSUAL" target="_blank" rel="noopener" class="btn-buy" id="buyBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Comprar ahora — Pago seguro con Stripe
+        </a>
 
         <div class="payment-section">
-          <h4>Accepted Methods</h4>
+          <h4>Procesado por</h4>
           <div class="payment-methods">
+            <span class="payment-tag">
+              <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              Visa
+            </span>
+            <span class="payment-tag">
+              <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              Mastercard
+            </span>
             <span class="payment-tag">
               <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
               Mercado Pago
             </span>
             <span class="payment-tag">
-              <svg viewBox="0 0 24 24"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><circle cx="18" cy="16" r="2"/></svg>
-              Transferencia
-            </span>
-            <span class="payment-tag">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M15 9.5c-.8-.7-1.8-1-3-1-2.2 0-3.5 1.2-3.5 2.8 0 1.5 1.3 2.3 3.5 2.8 2.2.5 3.5 1.3 3.5 2.8 0 1.5-1.3 2.8-3.5 2.8-1.2 0-2.2-.4-3-1"/></svg>
-              Crypto
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Pago seguro SSL
             </span>
           </div>
         </div>
+
+        <p style="font-size:0.75rem;color:var(--text-dim);margin-top:1.5rem;line-height:1.6;">Al comprar, aceptás nuestros <a href="terms.html" style="color:var(--accent);">Términos de Servicio</a> y <a href="privacy.html" style="color:var(--accent);">Política de Privacidad</a>. No se aceptan reembolsos una vez entregado el producto digital.</p>
       </div>
 
       <!-- Specs -->
@@ -113,143 +123,57 @@
         <div class="specs-nav" id="specsTabs">
           <button class="spec-tab active" data-tab="info">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            Information
+            Información
           </button>
           <button class="spec-tab" data-tab="features">
             <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            Features
+            Funciones
           </button>
           <button class="spec-tab" data-tab="install">
             <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Installation
+            Instalación
           </button>
           <button class="spec-tab" data-tab="reqs">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Requirements
+            Requisitos
           </button>
         </div>
 
         <table class="spec-table" id="tab-info">
-          <tr><td>Supported OS</td><td>Windows 10 / 11 (64-bit)</td></tr>
-          <tr><td>Supported GPU</td><td>NVIDIA / AMD / Intel</td></tr>
-          <tr><td>Setup Type</td><td>Single-PC & Dual-PC</td></tr>
-          <tr><td>Game Support</td><td>Counter-Strike 2 (all modes)</td></tr>
-          <tr><td>Update Speed</td><td>&lt; 24h after every CS2 patch</td></tr>
-          <tr><td>Delivery</td><td>Instant — direct download link</td></tr>
+          <tr><td>Sistema Operativo</td><td>Windows 10 / 11 (64-bit)</td></tr>
+          <tr><td>GPU Soportada</td><td>NVIDIA / AMD / Intel</td></tr>
+          <tr><td>Tipo de Setup</td><td>Single-PC y Dual-PC</td></tr>
+          <tr><td>Juego Soportado</td><td>Counter-Strike 2 (todos los modos)</td></tr>
+          <tr><td>Velocidad de Update</td><td>&lt; 24h después de cada parche</td></tr>
+          <tr><td>Entrega</td><td>Instantánea — link de descarga directo</td></tr>
         </table>
         <table class="spec-table" id="tab-features" style="display:none;">
-          <tr><td>AI Aim Assist</td><td>FOV, Smoothing, Reaction Delay</td></tr>
-          <tr><td>Full ESP</td><td>Boxes, Skeletons, Health, Names</td></tr>
-          <tr><td>Triggerbot</td><td>Configurable delay & timing</td></tr>
-          <tr><td>Radar</td><td>Full minimap info (real-time)</td></tr>
-          <tr><td>Movement</td><td>Assisted strafe optimization</td></tr>
-          <tr><td>Presets</td><td>Natural / Aggressive ready to use</td></tr>
+          <tr><td>AI Aim Assist</td><td>FOV, Smoothing, Delay de reacción</td></tr>
+          <tr><td>ESP Completo</td><td>Cajas, Esqueletos, Vida, Nombres</td></tr>
+          <tr><td>Triggerbot</td><td>Delay y timing configurables</td></tr>
+          <tr><td>Radar</td><td>Info completa del minimap en tiempo real</td></tr>
+          <tr><td>Movimiento</td><td>Optimización de strafe asistido</td></tr>
+          <tr><td>Presets</td><td>Natural / Agresivo listos para usar</td></tr>
         </table>
         <table class="spec-table" id="tab-install" style="display:none;">
-          <tr><td>Step 1</td><td>Complete purchase on this page</td></tr>
-          <tr><td>Step 2</td><td>Download launcher from your order</td></tr>
-          <tr><td>Step 3</td><td>Run launcher before opening CS2</td></tr>
-          <tr><td>Step 4</td><td>Press INSERT in-game to open menu</td></tr>
-          <tr><td>Important</td><td>Disable Windows Defender during setup</td></tr>
-          <tr><td>Total Time</td><td>Under 2 minutes</td></tr>
+          <tr><td>Paso 1</td><td>Completá la compra en esta página</td></tr>
+          <tr><td>Paso 2</td><td>Descargá el launcher desde tu orden</td></tr>
+          <tr><td>Paso 3</td><td>Ejecutá el launcher antes de abrir CS2</td></tr>
+          <tr><td>Paso 4</td><td>Presioná INSERT en partida para abrir menú</td></tr>
+          <tr><td>Importante</td><td>Desactivar Windows Defender durante el setup</td></tr>
+          <tr><td>Tiempo Total</td><td>Menos de 2 minutos</td></tr>
         </table>
         <table class="spec-table" id="tab-reqs" style="display:none;">
-          <tr><td>OS</td><td>Windows 10/11 (64-bit)</td></tr>
-          <tr><td>CPU</td><td>Any modern processor</td></tr>
+          <tr><td>SO</td><td>Windows 10/11 (64-bit)</td></tr>
+          <tr><td>CPU</td><td>Cualquier procesador moderno</td></tr>
           <tr><td>GPU</td><td>NVIDIA / AMD / Intel</td></tr>
-          <tr><td>RAM</td><td>8 GB minimum</td></tr>
-          <tr><td>Disk</td><td>~50 MB free space</td></tr>
-          <tr><td>Game</td><td>CS2 installed (Steam)</td></tr>
+          <tr><td>RAM</td><td>8 GB mínimo</td></tr>
+          <tr><td>Disco</td><td>~50 MB de espacio libre</td></tr>
+          <tr><td>Juego</td><td>CS2 instalado (Steam)</td></tr>
         </table>
       </div>
     </div>
   </main>
-
-  <!-- ============ CHECKOUT MODAL ============ -->
-  <div class="checkout-overlay" id="checkoutOverlay">
-    <div class="checkout-modal">
-      <button class="checkout-close" id="checkoutClose">&times;</button>
-
-      <h3>Complete Your Purchase</h3>
-      <p class="checkout-sub">Selected: <strong id="modalPlan">1 Month</strong> — <strong id="modalPrice">$10.000 ARS</strong></p>
-
-      <div class="checkout-method selected" data-method="mp" id="methodMP">
-        <div class="method-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        </div>
-        <div class="method-info">
-          <strong>Mercado Pago / Transferencia</strong>
-          <span>Alias, CBU, Débito o Crédito</span>
-        </div>
-      </div>
-
-      <div class="checkout-method" data-method="crypto" id="methodCrypto">
-        <div class="method-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M15 9.5c-.8-.7-1.8-1-3-1-2.2 0-3.5 1.2-3.5 2.8 0 1.5 1.3 2.3 3.5 2.8 2.2.5 3.5 1.3 3.5 2.8 0 1.5-1.3 2.8-3.5 2.8-1.2 0-2.2-.4-3-1"/></svg>
-        </div>
-        <div class="method-info">
-          <strong>Criptomonedas</strong>
-          <span>USDT (TRC20) / LTC / BTC</span>
-        </div>
-      </div>
-
-      <!-- Mercado Pago details -->
-      <div class="checkout-details active" id="detailsMP">
-        <div class="detail-row">
-          <span class="detail-label">Alias</span>
-          <span class="detail-value">
-            fishy.pagos
-            <button class="copy-btn" data-copy="fishy.pagos" title="Copy">
-              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">CVU</span>
-          <span class="detail-value">
-            0000003100012345678901
-            <button class="copy-btn" data-copy="0000003100012345678901" title="Copy">
-              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Titular</span>
-          <span class="detail-value">Fishy Digital</span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">Monto</span>
-          <span class="detail-value" id="detailAmount">$10.000 ARS</span>
-        </div>
-      </div>
-
-      <!-- Crypto details -->
-      <div class="checkout-details" id="detailsCrypto">
-        <div class="detail-row">
-          <span class="detail-label">USDT (TRC20)</span>
-          <span class="detail-value">
-            TXyz123...abc
-            <button class="copy-btn" data-copy="TXyz123abc456def789" title="Copy">
-              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </span>
-        </div>
-        <div class="detail-row">
-          <span class="detail-label">LTC</span>
-          <span class="detail-value">
-            LTC1q...xyz
-            <button class="copy-btn" data-copy="LTC1qxyz123abc456" title="Copy">
-              <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-            </button>
-          </span>
-        </div>
-      </div>
-
-      <div class="checkout-note">
-        <strong>⚡ Después de pagar:</strong> Enviá el comprobante de pago por WhatsApp o Instagram junto con tu mail. Recibís el acceso al instante una vez confirmado.
-      </div>
-    </div>
-  </div>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
@@ -263,14 +187,17 @@
         <span>Fishy</span>
       </a>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#features">Features</a>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#features">Producto</a>
         <a href="index.html#faq">FAQ</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Fishy is an independent digital product. Not affiliated with Valve Corporation or Counter-Strike 2.</p>
-      <p>© 2026 Fishy. All rights reserved.</p>
+      <p>Fishy es un producto digital independiente. No está afiliado a Valve Corporation ni a Counter-Strike 2.</p>
+      <div class="footer-legal-links">
+        <a href="terms.html">Términos de Servicio</a>
+        <a href="privacy.html">Política de Privacidad</a>
+      </div>
     </div>
   </footer>
 
@@ -279,9 +206,9 @@
     // ============ LICENSE SELECTOR ============
     const grid = document.getElementById('licenseGrid');
     const priceEl = document.getElementById('totalPrice');
+    const buyLink = document.getElementById('buyBtn');
     const opts = grid.querySelectorAll('.license-opt');
     const prices = { weekly:'$5.000', monthly:'$10.000', quarterly:'$20.000', lifetime:'$25.000' };
-    const labels = { weekly:'1 Week', monthly:'1 Month', quarterly:'3 Months', lifetime:'Lifetime' };
 
     let selectedPlan = 'monthly';
 
@@ -291,16 +218,17 @@
         o.classList.add('selected');
         selectedPlan = o.dataset.plan;
         priceEl.textContent = prices[selectedPlan];
+        buyLink.href = o.dataset.stripe;
       });
     });
 
-    // URL param
+    // URL param pre-selection
     const sp = new URLSearchParams(window.location.search);
     const pp = sp.get('plan');
     if (pp && prices[pp]) {
       opts.forEach(x => x.classList.remove('selected'));
       const t = grid.querySelector(`[data-plan="${pp}"]`);
-      if (t) { t.classList.add('selected'); selectedPlan = pp; priceEl.textContent = prices[pp]; }
+      if (t) { t.classList.add('selected'); selectedPlan = pp; priceEl.textContent = prices[pp]; buyLink.href = t.dataset.stripe; }
     }
 
     // ============ SPECS TABS ============
@@ -314,67 +242,6 @@
         tabIds.forEach(id => {
           const el = document.getElementById('tab-' + id);
           if (el) el.style.display = (id === active) ? '' : 'none';
-        });
-      });
-    });
-
-    // ============ CHECKOUT MODAL ============
-    const overlay = document.getElementById('checkoutOverlay');
-    const buyBtn = document.getElementById('buyBtn');
-    const closeBtn = document.getElementById('checkoutClose');
-    const modalPlan = document.getElementById('modalPlan');
-    const modalPrice = document.getElementById('modalPrice');
-    const detailAmount = document.getElementById('detailAmount');
-
-    buyBtn.addEventListener('click', () => {
-      modalPlan.textContent = labels[selectedPlan];
-      modalPrice.textContent = prices[selectedPlan] + ' ARS';
-      detailAmount.textContent = prices[selectedPlan] + ' ARS';
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-
-    // Payment method switch
-    const methodMP = document.getElementById('methodMP');
-    const methodCrypto = document.getElementById('methodCrypto');
-    const detailsMP = document.getElementById('detailsMP');
-    const detailsCrypto = document.getElementById('detailsCrypto');
-
-    methodMP.addEventListener('click', () => {
-      methodMP.classList.add('selected');
-      methodCrypto.classList.remove('selected');
-      detailsMP.classList.add('active');
-      detailsCrypto.classList.remove('active');
-    });
-
-    methodCrypto.addEventListener('click', () => {
-      methodCrypto.classList.add('selected');
-      methodMP.classList.remove('selected');
-      detailsCrypto.classList.add('active');
-      detailsMP.classList.remove('active');
-    });
-
-    // Copy buttons
-    document.querySelectorAll('.copy-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const text = btn.dataset.copy;
-        navigator.clipboard.writeText(text).then(() => {
-          const og = btn.innerHTML;
-          btn.innerHTML = '<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
-          btn.style.color = '#34d399';
-          setTimeout(() => { btn.innerHTML = og; btn.style.color = ''; }, 1500);
         });
       });
     });
