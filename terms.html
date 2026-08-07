@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Fishy — Términos de Servicio</title>
-  <meta name="description" content="Términos de Servicio de Fishy. Leé las condiciones de uso de nuestros productos digitales.">
+  <meta name="description" content="Términos de Servicio de Fishy. Base contractual entre el proveedor y los usuarios de la plataforma Fishy.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,114 +13,172 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="legal-page-body">
 
-  <canvas id="particles"></canvas>
-  <div class="cursor-glow" id="cursorGlow"></div>
-
+  <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="nav-inner">
       <div class="nav-left">
-        <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M26 5L36 2L32 12L36 22L26 19" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="11" r="1.2" fill="currentColor"/></svg><span>Fishy</span></a>
+        <a href="index.html" class="logo">
+          <svg class="logo-mark" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M26 5L36 2L32 12L36 22L26 19" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <circle cx="9" cy="11" r="1.2" fill="currentColor"/>
+          </svg>
+          <span>Fishy</span>
+        </a>
       </div>
+
       <nav class="nav-links">
-        <a href="index.html">INICIO</a>
-        <a href="index.html#features">PRODUCTO</a>
+        <a href="index.html">Inicio</a>
+        <a href="index.html#features">Productos</a>
         <a href="index.html#faq">FAQ</a>
-        <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="nav-discord"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.12-.094.246-.198.373-.292a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.094.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>Discord</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <div class="nav-right">
+        <a href="https://discord.gg/fishycs" target="_blank" rel="noopener" class="nav-discord">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.12-.094.246-.198.373-.292a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.094.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028z"/></svg>
+          Discord
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main class="legal-page">
-    <div class="legal-container">
+    <div class="legal-breadcrumbs">
+      <a href="index.html">Inicio</a> <span>/</span> Términos de Servicio
+    </div>
+
+    <div class="legal-header">
+      <span class="eyebrow">Legal</span>
       <h1>Términos de Servicio</h1>
-      <p class="legal-updated">Última actualización: 1 de agosto de 2026</p>
+      <p>Base contractual entre el proveedor y los usuarios de la plataforma Fishy, incluyendo el Acuerdo de Licencia de Usuario Final (EULA).</p>
+      
+      <div class="legal-meta">
+        <span><strong>Versión:</strong> 1.0</span>
+        <span><strong>Actualizado:</strong> 1 Agosto, 2026</span>
+        <span><strong>Idioma:</strong> Español (ARG)</span>
+      </div>
+    </div>
 
-      <p>Al acceder y utilizar el sitio web de Fishy ("el Sitio") y adquirir cualquiera de nuestros productos digitales ("el Producto"), aceptás estar sujeto a los siguientes Términos de Servicio. Si no estás de acuerdo con estos términos, no utilices nuestros servicios.</p>
+    <div class="legal-layout">
+      <!-- MAIN CONTENT -->
+      <div class="legal-main">
+        <a href="index.html" class="legal-back-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver a la página principal
+        </a>
 
-      <h2>1. Descripción del Servicio</h2>
-      <p>Fishy es un servicio de productos digitales independiente que ofrece software de asistencia visual y configuraciones para el videojuego Counter-Strike 2 ("CS2"). Fishy <strong>no está afiliado, asociado, autorizado, respaldado ni de ninguna manera conectado oficialmente con Valve Corporation</strong>, desarrolladora de CS2, ni con ninguna de sus subsidiarias o filiales.</p>
+        <div class="legal-content-container">
+          
+          <div class="legal-warning-box">
+            <h4>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              AVISO IMPORTANTE — LEER ANTES DE COMPRAR
+            </h4>
+            <p>Al realizar una orden, aceptas expresamente estos Términos de Servicio. El uso del software está <strong>RESERVADO PARA MAYORES DE 18 AÑOS</strong>.</p>
+            <p>Usas el software <strong>BAJO TU PROPIO RIESGO</strong> y eres el único responsable de cumplir con los términos del proveedor del juego, políticas de la plataforma y requerimientos legales. No nos hacemos cargo de suspensiones o bloqueos de cuentas (baneos) derivados del uso del producto.</p>
+          </div>
 
-      <h2>2. Aceptación de Riesgo</h2>
-      <p>El usuario reconoce y acepta que:</p>
-      <ul>
-        <li>El uso de software de terceros en juegos online puede violar los términos de servicio del juego y/o de la plataforma (incluyendo pero no limitado a Steam y Valve Anti-Cheat).</li>
-        <li><strong>Fishy no se hace responsable por ningún tipo de sanción, suspensión, baneo temporal o permanente, pérdida de cuenta, pérdida de inventario, pérdida de rango, ni ninguna otra consecuencia</strong> que pueda resultar del uso de nuestros productos.</li>
-        <li>El usuario asume la totalidad del riesgo asociado al uso del Producto. Usás Fishy bajo tu propia responsabilidad y riesgo.</li>
-        <li>Las estadísticas de "tasa de detección" o "bans reportados" publicadas en el Sitio son informativas y no constituyen una garantía de indetectabilidad.</li>
-      </ul>
+          <div class="legal-toc">
+            <h4>Tabla de Contenidos</h4>
+            <div class="toc-grid">
+              <a href="#01" class="toc-link"><span class="toc-num">01</span> Alcance</a>
+              <a href="#02" class="toc-link"><span class="toc-num">02</span> Descripción del Software</a>
+              <a href="#03" class="toc-link"><span class="toc-num">03</span> Precios y Pago</a>
+              <a href="#04" class="toc-link"><span class="toc-num">04</span> Licencias y Uso</a>
+              <a href="#05" class="toc-link"><span class="toc-num">05</span> Exención de Responsabilidad</a>
+              <a href="#06" class="toc-link"><span class="toc-num">06</span> Ausencia de Reembolsos</a>
+              <a href="#07" class="toc-link"><span class="toc-num">07</span> Medidas sobre Cuentas de Juego</a>
+              <a href="#08" class="toc-link"><span class="toc-num">08</span> Cambios a los Términos</a>
+            </div>
+          </div>
 
-      <h2>3. Producto Digital — Sin Reembolsos</h2>
-      <p>Debido a la naturaleza intangible e inmediata de los productos digitales:</p>
-      <ul>
-        <li><strong>No se aceptan reembolsos</strong> una vez que el producto ha sido entregado y la licencia activada.</li>
-        <li>Al completar la compra, renunciás expresamente a cualquier derecho de retracto o desistimiento aplicable a la venta de productos digitales.</li>
-        <li>En caso de que el producto presente un defecto técnico verificable que impida su funcionamiento, Fishy podrá, a su exclusiva discreción, ofrecer un reemplazo de licencia sin costo.</li>
-      </ul>
+          <div class="legal-section" id="01">
+            <h2><span class="sec-num">01</span> Alcance</h2>
+            <p>Fishy ("el Sitio", "nosotros", "nuestro") es un proveedor independiente de software de asistencia visual para juegos. Fishy <strong>no está afiliado, asociado, autorizado, respaldado ni de ninguna manera conectado oficialmente con Valve Corporation</strong>, ni con ninguna de sus filiales.</p>
+          </div>
 
-      <h2>4. Licencias y Uso</h2>
-      <ul>
-        <li>Cada licencia adquirida es <strong>personal, intransferible y de uso individual</strong>.</li>
-        <li>Está estrictamente prohibido compartir, revender, redistribuir, modificar, descompilar, realizar ingeniería inversa o intentar extraer el código fuente del Producto.</li>
-        <li>La violación de estas condiciones resultará en la revocación inmediata de la licencia sin derecho a reembolso ni compensación.</li>
-        <li>Fishy se reserva el derecho de revocar cualquier licencia en cualquier momento si se detecta un uso indebido.</li>
-      </ul>
+          <div class="legal-section" id="02">
+            <h2><span class="sec-num">02</span> Descripción del Software</h2>
+            <p>El software proporcionado es una herramienta digital diseñada para operar de forma independiente. Si bien nos esforzamos en mantener el software actualizado con los últimos parches del juego, no garantizamos su disponibilidad o funcionalidad continua e ininterrumpida.</p>
+          </div>
 
-      <h2>5. Disponibilidad del Servicio</h2>
-      <ul>
-        <li>Fishy no garantiza la disponibilidad ininterrumpida del Producto. El software puede experimentar interrupciones temporales debido a actualizaciones del juego, mantenimiento o circunstancias fuera de nuestro control.</li>
-        <li>Nos esforzamos por actualizar el Producto dentro de las 24 horas posteriores a cada parche de CS2, pero esto no constituye una obligación contractual.</li>
-        <li>Fishy se reserva el derecho de <strong>discontinuar el servicio en cualquier momento</strong> sin previo aviso ni obligación de reembolso por tiempo restante de licencia.</li>
-      </ul>
+          <div class="legal-section" id="03">
+            <h2><span class="sec-num">03</span> Precios y Pago</h2>
+            <p>Los precios están expresados en Pesos Argentinos (ARS) y pueden variar sin previo aviso. Todos los pagos son procesados de manera segura por procesadores de terceros (como Stripe o Mercado Pago). La entrega del producto digital se realiza de forma inmediata tras la confirmación exitosa del pago.</p>
+          </div>
 
-      <h2>6. Conducta del Usuario</h2>
-      <p>Al utilizar Fishy, el usuario se compromete a:</p>
-      <ul>
-        <li>No utilizar el Producto con fines ilegales o en jurisdicciones donde su uso esté prohibido.</li>
-        <li>No intentar vulnerar, hackear o comprometer la seguridad del Sitio, los servidores o la infraestructura de Fishy.</li>
-        <li>No difundir información falsa sobre el Producto ni realizar denuncias maliciosas.</li>
-        <li>Mantener las credenciales de acceso de forma confidencial.</li>
-      </ul>
+          <div class="legal-section" id="04">
+            <h2><span class="sec-num">04</span> Licencias y Uso</h2>
+            <ul>
+              <li>Cada licencia adquirida es <strong>personal e intransferible</strong>.</li>
+              <li>Queda estrictamente prohibido compartir credenciales de acceso, revender, aplicar ingeniería inversa, o modificar el software.</li>
+              <li>La violación de estas reglas resultará en la terminación inmediata y sin reembolso de la licencia.</li>
+            </ul>
+          </div>
 
-      <h2>7. Limitación de Responsabilidad</h2>
-      <p>En la máxima extensión permitida por la ley aplicable:</p>
-      <ul>
-        <li>Fishy, sus operadores, colaboradores y afiliados <strong>no serán responsables por ningún daño directo, indirecto, incidental, especial, consecuente o punitivo</strong> que surja del uso o la imposibilidad de uso del Producto.</li>
-        <li>Esto incluye, sin limitación: pérdida de datos, pérdida de cuentas de juego, pérdida de inventario virtual, pérdida de ganancias, daños a la reputación online, o cualquier otra pérdida intangible.</li>
-        <li>La responsabilidad total acumulada de Fishy no excederá en ningún caso el monto pagado por el usuario por la licencia en cuestión.</li>
-      </ul>
+          <div class="legal-section" id="05">
+            <h2><span class="sec-num">05</span> Exención de Responsabilidad</h2>
+            <p>En la máxima extensión permitida por la ley, Fishy y sus creadores <strong>no serán responsables por daños directos, indirectos, incidentales o consecuentes</strong> derivados del uso o la imposibilidad de uso del software. El usuario asume el 100% de la responsabilidad sobre cualquier consecuencia que derive de inyectar o ejecutar software de terceros.</p>
+          </div>
 
-      <h2>8. Propiedad Intelectual</h2>
-      <p>Todo el contenido del Sitio, incluyendo pero no limitado a textos, gráficos, logos, íconos, imágenes, código y software, es propiedad de Fishy o de sus licenciantes y está protegido por las leyes de propiedad intelectual aplicables. Counter-Strike 2 y Steam son marcas registradas de Valve Corporation.</p>
+          <div class="legal-section" id="06">
+            <h2><span class="sec-num">06</span> Ausencia de Reembolsos</h2>
+            <p>Debido a que Fishy proporciona productos digitales e intangibles de entrega inmediata, <strong>no ofrecemos reembolsos</strong> una vez que la licencia ha sido generada o utilizada. Al realizar la compra, el usuario renuncia a su derecho de retracto.</p>
+          </div>
 
-      <h2>9. Pagos</h2>
-      <ul>
-        <li>Todos los pagos se procesan de forma segura a través de Stripe, un procesador de pagos certificado con estándares PCI DSS.</li>
-        <li>Fishy no almacena información de tarjetas de crédito o débito.</li>
-        <li>Los precios están expresados en Pesos Argentinos (ARS) y pueden estar sujetos a cambios sin previo aviso.</li>
-      </ul>
+          <div class="legal-section" id="07">
+            <h2><span class="sec-num">07</span> Medidas sobre Cuentas de Juego (Bans)</h2>
+            <p>El uso de este software puede violar los Términos de Servicio del desarrollador original del juego (ej. Valve). <strong>Reiteramos que Fishy no asume ninguna responsabilidad si tu cuenta de Steam sufre un bloqueo por VAC (Valve Anti-Cheat), suspensiones de Overwatch, o cualquier otro tipo de penalización.</strong> Utiliza el producto siempre bajo tu absoluta responsabilidad.</p>
+          </div>
 
-      <h2>10. Modificaciones</h2>
-      <p>Fishy se reserva el derecho de modificar estos Términos de Servicio en cualquier momento. Las modificaciones entrarán en vigor a partir de su publicación en el Sitio. El uso continuado del servicio después de cualquier cambio constituye la aceptación de los nuevos términos.</p>
+          <div class="legal-section" id="08">
+            <h2><span class="sec-num">08</span> Cambios a los Términos</h2>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios tomarán efecto de inmediato al ser publicados en el Sitio web. Es responsabilidad del usuario revisar periódicamente esta página.</p>
+          </div>
 
-      <h2>11. Ley Aplicable</h2>
-      <p>Estos Términos se rigen por las leyes de la República Argentina. Cualquier disputa será sometida a la jurisdicción de los tribunales ordinarios de la Ciudad Autónoma de Buenos Aires.</p>
+        </div>
+      </div>
 
-      <h2>12. Contacto</h2>
-      <p>Para consultas relacionadas con estos Términos de Servicio, podés contactarnos a través de nuestro servidor de <a href="https://discord.gg/fishycs" style="color:var(--accent)">Discord</a>.</p>
+      <!-- SIDEBAR -->
+      <aside class="legal-sidebar">
+        <div class="legal-sidebar-title">Legal</div>
+        <nav class="legal-sidebar-nav">
+          <a href="terms.html" class="sidebar-link active">Términos de Servicio</a>
+          <a href="privacy.html" class="sidebar-link">Política de Privacidad</a>
+          <a href="purchase.html" class="sidebar-link">Renuncia de Responsabilidad</a>
+        </nav>
+      </aside>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-main">
-      <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M26 5L36 2L32 12L36 22L26 19" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="9" cy="11" r="1.2" fill="currentColor"/></svg><span>Fishy</span></a>
-      <div class="footer-links"><a href="index.html">Inicio</a><a href="index.html#features">Producto</a><a href="purchase.html">Comprar</a></div>
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 12C8 4 18 2 26 5C24 8 24 16 26 19C18 22 8 20 2 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M26 5L36 2L32 12L36 22L26 19" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="9" cy="11" r="1.2" fill="currentColor"/>
+        </svg>
+        <span>Fishy</span>
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#features">Productos</a>
+        <a href="purchase.html">Comprar</a>
+      </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Fishy. Todos los derechos reservados.</p>
-      <div class="footer-legal-links"><a href="terms.html">Términos de Servicio</a><a href="privacy.html">Política de Privacidad</a></div>
+      <div class="footer-legal-links">
+        <a href="terms.html">Términos de Servicio</a>
+        <a href="privacy.html">Política de Privacidad</a>
+      </div>
     </div>
   </footer>
 
